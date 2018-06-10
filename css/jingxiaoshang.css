@@ -65,13 +65,12 @@ a{
 	margin:0px auto;
 }
 .daohanglan1{
-	width:842px;
-    margin:0px 152px 0px 0px;
+	width:940px;
     float: left;
 }
 .daohanglan1 li{
 	float: left;
-	padding-right:40px;
+	padding-right:50px;
 	line-height: 50px;
 }
 .daohanglan1 a{
@@ -88,18 +87,23 @@ a{
 .sousuokuang{
     float: left;
     margin-top: 8px;
+    width: 230px;
 }
 .sousuokuang input{
-	background-color: #ebeaea;
-	height:27px;
+	height:30px;
 	width: 200px;
 	border-color:#ebeaea;
 	border-style: solid;
+	background-color: #ebeaea;
+	float: left;
+}
+.fangdajing{
+	float: left;
+	height: 34px;
+	background-color:#ebeaea; 
 }
 .fangdajing img{
-	position:absolute;
-	top:123px;
-	left: 1200px;
+	padding-top: 7px;
 }
 .zuidahezi{
 	width: 100%;
@@ -156,7 +160,7 @@ a{
 	color:#333333;
 }
 .yihe{
-	margin: 0px 150px 28px 20px;
+	margin: 0px 242px 28px 20px;
     float: left;
 }
 .yihe p{
@@ -174,7 +178,7 @@ a{
 	color:#333333; 
 }
 .beijinghe{
-    margin: 0px 80px 28px 20px;
+    margin: 0px 178px 28px 20px;
     float: left;
 }
 .beijinghe p{
@@ -225,9 +229,9 @@ a{
 }
 .qita{
 	float: left;
-	width: 220px;
+	width: 205px;
 	height: 60px;
-	margin-left:250px;
+	margin-left:445px;
 }
 .qita img{
 	padding: 12px 0px 12px 0px;
@@ -243,7 +247,7 @@ a{
 	margin:0 auto;
 }
 .heihe1{
-	width: 690px;
+	width: 860px;
 	height: 190px;
 	float: left;
 	margin-top:73px;
@@ -261,13 +265,13 @@ a{
 	color: #dbdbdb;
 }
 .heihe2{	
-	margin-right:40px;
+	margin-right:75px;
 	float: left;
 }
 .heihe3{
 	width:200px;
 	height:230px;
-	margin:32px 0px 0px 40px; 
+	margin:32px 0px 0px 60px; 
 	float: left;
 }
 .heihe3 p{
@@ -319,7 +323,7 @@ a{
     background:url(../images/huijukuang.png);
     position:fixed;
     top:180px;
-    left:1150px;
+    right:0px;
 }
 .guanggao1{
     height:83px;
