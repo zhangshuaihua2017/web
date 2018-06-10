@@ -260,8 +260,9 @@ a{
 }
 .heihe1 li{
 	font-size: 14px;
-	color: #ffffff;
 	margin-bottom:10px;
+}
+.heihe1 a{
 	color: #dbdbdb;
 }
 .heihe2{	
