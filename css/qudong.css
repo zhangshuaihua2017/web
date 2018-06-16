@@ -195,7 +195,7 @@ a{
     width: 402px;
     height: 30px;
     text-align: center;
-    margin:6px 0px 0px 10px;
+    margin:6px 0px -2px 10px;
 } 
 .ju2{
 	background: url(../images/ju2.png) no-repeat;
@@ -203,7 +203,7 @@ a{
 	width: 398px;
     height: 30px;
     text-align: center;
-    margin: 6px 0px 0px -4px;
+    margin: 6px 0px -2px -4px;
 }
 .ju4{
 	background: url(../images/ju4.png) no-repeat;
@@ -211,13 +211,13 @@ a{
 	width: 385px;
     height: 30px;
     text-align: center;
-    margin:6px 0px 0px -12px;
+    margin:6px 0px -2px -12px;
 }
 .ju3{
 	width: 1200px;
 	height: 13px;
-	background: url(../images/ju3.png) no-repeat;
-	margin-top: -3px;
+	background-color: #0b4199;
+	border-radius: 6px;
 	float: left;
 }
 .anneirong{
