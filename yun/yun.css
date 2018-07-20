@@ -117,10 +117,7 @@ a{
     background-color: #f43f50;
 }
 .hang1{
-	margin:0px 40px 0px 40px;
-}
-.hang2{
-	margin:369px 40px 0px 40px;
+	margin:0px 40px 0px 110px;
 }
 .wangyi1{
 	float: left;
@@ -131,7 +128,7 @@ a{
 }
 .xiong{
 	position: absolute;
-	top:0px;
+	top:10px;
 	left: 200px;
 }
 .youhe{
