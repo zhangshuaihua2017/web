@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     <link rel="stylesheet" type="text/css" href="../static/css/responsive.css">
     <link rel="stylesheet" type="text/css" href="../static/lib/editor/css/editormd.css">
-</head>
+</head> 
 
 
 <body>
@@ -25,28 +25,134 @@
 
 <div class="wrapper">
 
-    <header>
+    <header style="background-color: #FF6700;">
         <div class="container">
             <div class="header-data">
-                <div class="forum-bar">
-                    <a style="display: inline-block" href="index.html" title="">
-                        <img src="../static/images/cloud.png" alt="">
-                    </a>
-                    <h2 style="float: right">博客管理系统</h2>
-                </div>
+                <div class="logo" style="width: auto;">
+                    <a href="#" style="font-weight: bold;font-size: 30px;color: #fff;">知否笔记</a>
+                </div><!--logo end-->
+                <nav style="text-align: left;width: 35%; font-weight: bold;padding-top: 5px;padding-left: 20px">
+                    <ul>
+                        <li>
+                            <a href="index.html" title="" style="background-color: #fff;padding: 10px 15px;color: #FF6700 !important;font-size: 14px;border-radius: 50%">
+                                <!-- <span><img src="../static/images/icon1.png" alt=""></span> -->
+                                首页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="" class="not-box-open">
+                                <!-- <span><img src="../static/images/icon6.png" alt=""></span> -->
+                                Messages
+                            </a>
+                            <div class="notification-box msg">
+                                <div class="nt-title">
+                                    <h4>Setting</h4>
+                                    <a href="#" title="">Clear all</a>
+                                </div>
+                                <div class="nott-list">
+                                    <div class="notfication-details">
+                                        <div class="noty-user-img">
+                                            <img src="../static/images/resources/ny-img1.png" alt="">
+                                        </div>
+                                        <div class="notification-info">
+                                            <h3><a href="messages.html" title="">Jassica William</a> </h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                                            <span>2 min ago</span>
+                                        </div><!--notification-info -->
+                                    </div>
+                                    <div class="notfication-details">
+                                        <div class="noty-user-img">
+                                            <img src="../static/images/resources/ny-img2.png" alt="">
+                                        </div>
+                                        <div class="notification-info">
+                                            <h3><a href="messages.html" title="">Jassica William</a></h3>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+                                            <span>2 min ago</span>
+                                        </div><!--notification-info -->
+                                    </div>
+                                    <div class="notfication-details">
+                                        <div class="noty-user-img">
+                                            <img src="../static/images/resources/ny-img3.png" alt="">
+                                        </div>
+                                        <div class="notification-info">
+                                            <h3><a href="messages.html" title="">Jassica William</a></h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo incididunt ut labore et dolore magna aliqua.</p>
+                                            <span>2 min ago</span>
+                                        </div><!--notification-info -->
+                                    </div>
+                                    <div class="view-all-nots">
+                                        <a href="messages.html" title="">View All Messsages</a>
+                                    </div>
+                                </div><!--nott-list end-->
+                            </div><!--notification-box end-->
+                        </li>
+                    </ul>
+                </nav>
+                <div class="search-bar">
+                    <form>
+                        <input type="text" name="search" placeholder="Search...">
+                        <button type="submit"><i class="la la-search" style="color: #FF6700"></i></button>
+                    </form>
+                </div><!--search-bar end-->
+                <!--nav end-->
+                <div class="menu-btn">
+                    <a href="#" title=""><i class="fa fa-bars"></i></a>
+                </div><!--menu-btn end-->
+
                 <div class="user-account">
                     <div class="user-info">
                         <img src="../static/images/resources/user.png" alt="">
                         <a href="#" title="">John</a>
-                        <i class="la la-sort-down"></i>
+                        <i class="la la-sort-down" style="color: #bcbcbc;margin-left: -10px"></i>
                     </div>
                     <div class="user-account-settingss">
-                        <a href="#" title=""><h3 class="tc">Logout</h3></a>
+                        <h3>Online Status</h3>
+                        <ul class="on-off-status">
+                            <li>
+                                <div class="fgt-sec">
+                                    <input type="radio" name="cc" id="c5">
+                                    <label for="c5">
+                                        <span></span>
+                                    </label>
+                                    <small>Online</small>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fgt-sec">
+                                    <input type="radio" name="cc" id="c6">
+                                    <label for="c6">
+                                        <span></span>
+                                    </label>
+                                    <small>Offline</small>
+                                </div>
+                            </li>
+                        </ul>
+                        <h3>Custom Status</h3>
+                        <div class="search_form">
+                            <form>
+                                <input type="text" name="search">
+                                <button type="submit">Ok</button>
+                            </form>
+                        </div><!--search_form end-->
+                        <h3>Setting</h3>
+                        <ul class="us-links">
+                            <li><a href="profile-account-setting.html" title="">Account Setting</a></li>
+                            <li><a href="#" title="">Privacy</a></li>
+                            <li><a href="#" title="">Faqs</a></li>
+                            <li><a href="#" title="">Terms & Conditions</a></li>
+                        </ul>
+                        <h3 class="tc"><a href="#" title="">Logout</a></h3>
                     </div><!--user-account-settingss end-->
                 </div>
+                <!-- <div class="login_register" style="margin-bottom: 8px;">
+                    <ul>
+                        <li><a href="sign-in.html" title="">Login</a></li>
+                    </ul>
+                </div> --><!--login_register end-->
+                
             </div><!--header-data end-->
         </div>
-    </header>
+    </header>   <!--header end-->   
 
 
     <section class="profile-account-setting">
@@ -58,25 +164,16 @@
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                 <a class="nav-item nav-link active" id="nav-deactivate-tab" data-toggle="tab"
                                      href="#nav-deactivate" role="tab" aria-controls="nav-deactivate" aria-selected="false">
-                                    <i class="fa fa-pencil"></i>发布博客</a>
+                                    <i class="fa fa-pencil"></i>发布笔记</a>
                                 <a class="nav-item nav-link" id="nav-requests-tab" data-toggle="tab"
                                    href="#nav-requests" role="tab" aria-controls="nav-requests" aria-selected="false">
-                                    <i class="fa fa-book"></i>博客管理</a>
+                                    <i class="fa fa-book"></i>笔记管理</a>
                                 <a class="nav-item nav-link" id="security-login" data-toggle="tab"
                                    href="#tab" role="tab" aria-controls="security-login" aria-selected="false">
                                     <i class="fa fa-bookmark"></i>标签管理</a>
                                 <a class="nav-item nav-link" id="nav-status-tab" data-toggle="tab" href="#nav-status"
                                    role="tab" aria-controls="nav-status" aria-selected="false">
                                     <i class="fa fa-line-chart"></i>统计</a>
-                                <a class="nav-item nav-link" id="nav-notification-tab" data-toggle="tab"
-                                   href="#nav-notification" role="tab" aria-controls="nav-notification" aria-selected="false">
-                                    <i class="fa fa-bell"></i>消息</a>
-                                <a class="nav-item nav-link" id="nav-password-tab" data-toggle="tab"
-                                   href="#nav-password" role="tab" aria-controls="nav-password" aria-selected="false">
-                                    <i class="fa fa-lock"></i>修改密码</a>
-                                <a class="nav-item nav-link" id="nav-acc-tab" data-toggle="tab" href="#nav-acc"
-                                   role="tab" aria-controls="nav-acc" aria-selected="true">
-                                    <i class="la la-cogs"></i>账号设置</a>
                             </div>
                         </div><!--acc-leftbar end-->
                     </div>
@@ -438,7 +535,7 @@
                                     <div class="requests-list">
                                         <div class="request-details align-items-center">
                                             <div class="request-info">
-                                                <h3 style="font-size: 20px">c++</h3>
+                                                <h3 style="font-size: 20px">C++</h3>
                                             </div>
                                         <div class="accept-feat">
                                             <ul>
@@ -451,7 +548,7 @@
                                     </div><!--request-detailse end-->
                                         <div class="request-details align-items-center">
                                             <div class="request-info">
-                                                <h3 style="font-size: 20px">c++</h3>
+                                                <h3 style="font-size: 20px">Php</h3>
                                             </div>
                                             <div class="accept-feat">
                                                 <ul>
@@ -464,7 +561,7 @@
                                         </div><!--request-detailse end-->
                                         <div class="request-details align-items-center">
                                             <div class="request-info">
-                                                <h3 style="font-size: 20px">c++</h3>
+                                                <h3 style="font-size: 20px">Work</h3>
                                             </div>
                                             <div class="accept-feat">
                                                 <ul>
@@ -477,7 +574,7 @@
                                         </div><!--request-detailse end-->
                                         <div class="request-details align-items-center">
                                             <div class="request-info">
-                                                <h3 style="font-size: 20px">c++</h3>
+                                                <h3 style="font-size: 20px">Java</h3>
                                             </div>
                                             <div class="accept-feat">
                                                 <ul>
@@ -490,7 +587,7 @@
                                         </div><!--request-detailse end-->
                                         <div class="request-details align-items-center">
                                             <div class="request-info">
-                                                <h3 style="font-size: 20px">c++</h3>
+                                                <h3 style="font-size: 20px">Python</h3>
                                             </div>
                                             <div class="accept-feat">
                                                 <ul>
@@ -556,205 +653,6 @@
                                     </div><!--pro-work-status end-->
                                 </div><!--acc-setting end-->
                             </div>
-                            <div class="tab-pane fade" id="nav-notification" role="tabpanel" aria-labelledby="nav-notification-tab">
-                                <div class="acc-setting">
-                                    <h3>消息</h3>
-                                    <div class="notifications-list">
-                                        <div class="notfication-details">
-                                            <div class="noty-user-img">
-                                                <img src="../static/images/resources/ny-img1.png" alt="">
-                                            </div>
-                                            <div class="notification-info">
-                                                <h3><a href="#" title="">Jassica William</a> Comment on your project.
-                                                </h3>
-                                                <span>2 min ago</span>
-                                            </div><!--notification-info -->
-                                        </div><!--notfication-details end-->
-                                        <div class="notfication-details">
-                                            <div class="noty-user-img">
-                                                <img src="../static/images/resources/ny-img2.png" alt="">
-                                            </div>
-                                            <div class="notification-info">
-                                                <h3><a href="#" title="">Poonam Verma</a> Bid on your Latest project.
-                                                </h3>
-                                                <span>2 min ago</span>
-                                            </div><!--notification-info -->
-                                        </div><!--notfication-details end-->
-                                        <div class="notfication-details">
-                                            <div class="noty-user-img">
-                                                <img src="../static/images/resources/ny-img3.png" alt="">
-                                            </div>
-                                            <div class="notification-info">
-                                                <h3><a href="#" title="">Tonney Dhman</a> Comment on your project.</h3>
-                                                <span>2 min ago</span>
-                                            </div><!--notification-info -->
-                                        </div><!--notfication-details end-->
-                                        <div class="notfication-details">
-                                            <div class="noty-user-img">
-                                                <img src="../static/images/resources/ny-img1.png" alt="">
-                                            </div>
-                                            <div class="notification-info">
-                                                <h3><a href="#" title="">Jassica William</a> Comment on your project.
-                                                </h3>
-                                                <span>2 min ago</span>
-                                            </div><!--notification-info -->
-                                        </div><!--notfication-details end-->
-                                        <div class="notfication-details">
-                                            <div class="noty-user-img">
-                                                <img src="../static/images/resources/ny-img1.png" alt="">
-                                            </div>
-                                            <div class="notification-info">
-                                                <h3><a href="#" title="">Jassica William</a> Comment on your project.
-                                                </h3>
-                                                <span>2 min ago</span>
-                                            </div><!--notification-info -->
-                                        </div><!--notfication-details end-->
-                                        <div class="notfication-details">
-                                            <div class="noty-user-img">
-                                                <img src="../static/images/resources/ny-img2.png" alt="">
-                                            </div>
-                                            <div class="notification-info">
-                                                <h3><a href="#" title="">Poonam Verma </a> Bid on your Latest project.
-                                                </h3>
-                                                <span>2 min ago</span>
-                                            </div><!--notification-info -->
-                                        </div><!--notfication-details end-->
-                                        <div class="notfication-details">
-                                            <div class="noty-user-img">
-                                                <img src="../static/images/resources/ny-img3.png" alt="">
-                                            </div>
-                                            <div class="notification-info">
-                                                <h3><a href="#" title="">Tonney Dhman</a> Comment on your project</h3>
-                                                <span>2 min ago</span>
-                                            </div><!--notification-info -->
-                                        </div><!--notfication-details end-->
-                                        <div class="notfication-details">
-                                            <div class="noty-user-img">
-                                                <img src="../static/images/resources/ny-img1.png" alt="">
-                                            </div>
-                                            <div class="notification-info">
-                                                <h3><a href="#" title="">Jassica William</a> Comment on your project.
-                                                </h3>
-                                                <span>2 min ago</span>
-                                            </div><!--notification-info -->
-                                        </div><!--notfication-details end-->
-                                    </div><!--notifications-list end-->
-                                    <nav aria-label="Page navigation example" style="width: 100%">
-                                        <ul class="pagination justify-content-center">
-                                            <li class="page-item disabled">
-                                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                                            </li>
-                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">6</a></li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#">Next</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div><!--acc-setting end-->
-                            </div>
-                            <div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
-                                <div class="acc-setting">
-                                    <h3>修改密码</h3>
-                                    <form>
-                                        <div class="cp-field">
-                                            <h5>旧密码</h5>
-                                            <div class="cpp-fiels">
-                                                <input type="password" name="old-password" placeholder="Old Password">
-                                                <i class="fa fa-lock"></i>
-                                            </div>
-                                        </div>
-                                        <div class="cp-field">
-                                            <h5>新密码</h5>
-                                            <div class="cpp-fiels">
-                                                <input type="password" name="new-password" placeholder="New Password">
-                                                <i class="fa fa-lock"></i>
-                                            </div>
-                                        </div>
-                                        <div class="cp-field">
-                                            <h5>确认密码</h5>
-                                            <div class="cpp-fiels">
-                                                <input type="password" name="repeat-password" placeholder="Repeat Password">
-                                                <i class="fa fa-lock"></i>
-                                            </div>
-                                        </div>
-                                        <div class="save-stngs pd2">
-                                            <ul>
-                                                <li>
-                                                    <button type="submit">保存</button>
-                                                </li>
-                                                <li>
-                                                    <button type="reset">重置</button>
-                                                </li>
-                                            </ul>
-                                        </div><!--save-stngs end-->
-                                    </form>
-                                </div><!--acc-setting end-->
-                            </div>
-                            <div class="tab-pane fade" id="nav-acc" role="tabpanel" aria-labelledby="nav-acc-tab">
-                                    <div class="acc-setting">
-                                        <h3>账户设置</h3>
-                                        <form>
-                                            <div class="cp-field">
-                                                <h5>昵称</h5>
-                                                <div class="cpp-fiels">
-                                                    <input type="text" name="old-password" placeholder="NickName">
-                                                    <i class="fa fa-male"></i>
-                                                </div>
-                                            </div>
-                                            <div class="cp-field">
-                                                <h5>邮箱</h5>
-                                                <div class="cpp-fiels">
-                                                    <input type="email" name="new-password" placeholder=" Email">
-                                                    <i class="fa fa-envelope-square"></i>
-                                                </div>
-                                            </div>
-                                            <div class="cp-field">
-                                                <h5>GitHub</h5>
-                                                <div class="cpp-fiels">
-                                                    <input type="text" name="repeat-password" placeholder=" GitHub">
-                                                    <i class="fa fa-github"></i>
-                                                </div>
-                                            </div>
-                                            <div class="cp-field">
-                                                <h5>个人简介</h5>
-                                                <div class="cpp-fiels">
-                                                    <input type="text" name="repeat-password" placeholder=" 介绍一下自己吧">
-                                                    <i class="fa fa-pencil-square-o"></i>
-                                                </div>
-                                            </div>
-                                            <div class="cp-field" style="width: 50%">
-                                                <h5 class="h5">头像</h5>
-                                                <div class="cpp-fiels row align-items-center">
-                                                    <img src="../static/images/cmp-icon1.png">
-                                                    <input style="width: auto;border: none;height: auto" type="file" name="repeat-password">
-                                                </div>
-                                            </div>
-                                            <div class="cp-field" style="width: 50%">
-                                                <h5 class="h5">打赏码</h5>
-                                                <div class="cpp-fiels row align-items-center">
-                                                    <img src="../static/images/cmp-icon1.png">
-                                                    <input style="width: auto;border: none;height: auto" type="file" name="repeat-password">
-                                                </div>
-                                                <div class="cpp-fiels row align-items-center">
-                                                    <img src="../static/images/cmp-icon1.png">
-                                                    <input style="width: auto;border: none;height: auto" type="file" name="repeat-password">
-                                                </div>
-                                            </div>
-                                            <div class="save-stngs pd2">
-                                                <ul style="text-align: center;">
-                                                    <li>
-                                                        <button type="submit">保存</button>
-                                                    </li>
-                                                </ul>
-                                            </div><!--save-stngs end-->
-                                        </form>
-                                    </div><!--acc-setting end-->
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -764,23 +662,24 @@
 
 </div><!--theme-layout end-->
 
-<div class="chatbox-list">
-    <div class="chatbox">
-        <div class="chat-mg bx" style="margin: 20px 10px">
-            <div class="go-top">
-                <div class="arrow" style="text-align: center"><i class="fa fa-chevron-up"></i></div>
+    <div class="chatbox-list" style="display: block;">
+        <div class="chatbox">
+            <div class="chat-mg" style="margin: 20px 10px">
+                <div class="go-top">
+                    <div class="arrow" style="text-align: center"><i class="fa fa-chevron-up"></i></div>
+                </div>
             </div>
         </div>
-    </div>
-</div><!--chatbox-list end-->
+    </div><!--chatbox-list end-->
 
 <footer class="myfooter">
     <div class="footy-sec mn no-margin">
-        <div class="container">
-            <p class="text-center" style="float: none"><img src="../static/images/copy-icon2.png" alt="">Copyright 2020 本归尘博客系统由游马版权所有</p>
+        <div class="container text-center">
+            <p style="float: none;"><span><img style="float: none;" src="../static/images/copy-icon2.png" alt="">Copyright 2020 本归尘博客系统由游马版权所有</span></p>
         </div>
     </div>
 </footer>
+
 
 <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="../static/js/popper.js"></script>
@@ -790,12 +689,14 @@
 <script type="text/javascript" src="../static/js/script.js"></script>
 <script type="text/javascript" src="../static/lib/editor/editormd.min.js"></script>
 <script>
+    //回顶部
     $(function() {
         $(window).scroll(function() {
-            if ($(window).scrollTop() > 1000)
+            if ($(window).scrollTop() > 0){
                 $('div.go-top').show();
-            else
+            }else{
                 $('div.go-top').hide();
+            }
         });
         $('div.go-top').click(function() {
             $('html, body').animate({scrollTop: 0}, 1000);

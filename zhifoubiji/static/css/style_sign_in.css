@@ -12,7 +12,7 @@
 6.  Navigations
 7.  Dropdown
 8.  Responsive Header
-9.  Revolution Slider (Banner)
+9.  Revolution Slider (Banner) 
 10. About App
 11. Amazing Features
 12. Interesting Screenshots
@@ -2034,12 +2034,11 @@ select {
 .cmp-info {
 	float: left;
 	width: 100%;
-	padding: 30px 5px 22px 5px;
+	padding: 50px 5px 20px 5px;
 }
 .cm-logo {
 	float: left;
 	width: 100%;
-	padding-left: 45px;
 	margin-bottom: 0px;
 	position: relative;
 }
