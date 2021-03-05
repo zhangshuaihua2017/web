@@ -26,24 +26,30 @@
 	<div class="wrapper">
 		
 
-		<header style="background-color: #FF6700;">
+		<header>
 			<div class="container">
 				<div class="header-data">
-					<div class="logo" style="width: auto;">
-						<a href="#" style="font-weight: bold;font-size: 30px;color: #fff;">知否笔记</a>
+					<div class="logo">
+						<a href="#" class="logo-text">知否笔记</a>
 					</div><!--logo end-->
-					<nav style="text-align: left;width: 35%; font-weight: bold;padding-top: 5px;padding-left: 20px">
+					<nav style="">
 						<ul>
 							<li>
-								<a href="index.html" title="" style="background-color: #fff;padding: 10px 15px;color: #FF6700 !important;font-size: 14px;border-radius: 50%">
+								<a href="index.html" title="">
 									<!-- <span><img src="../static/images/icon1.png" alt=""></span> -->
 									首页
 								</a>
 							</li>
 							<li>
+								<a href="index.html" title="">
+									<!-- <span><img src="../static/images/icon1.png" alt=""></span> -->
+									关注
+								</a>
+							</li>
+							<li>
 								<a href="#" title="" class="not-box-open">
 									<!-- <span><img src="../static/images/icon6.png" alt=""></span> -->
-									Messages
+									消息
 								</a>
 								<div class="notification-box msg">
 									<div class="nt-title">
@@ -104,7 +110,7 @@
 						<div class="user-info">
 							<img src="../static/images/resources/user.png" alt="">
 							<a href="#" title="">John</a>
-							<i class="la la-sort-down" style="color: #bcbcbc;margin-left: -10px"></i>
+							<i class="la la-sort-down"></i>
 						</div>
 						<div class="user-account-settingss">
 							<h3>Online Status</h3>
@@ -153,7 +159,7 @@
 					
 				</div><!--header-data end-->
 			</div>
-		</header><!--header end-->	
+		</header>	<!--header end-->	
 
 
 		<!-- <section class="cover-sec">
@@ -182,11 +188,11 @@
 											</div>
 										</div><!--user-profile end-->
 										<div class="user_pro_status">
-											<ul class="flw-hr">
-												<li><a href="#" title="" class="flww"><i class="la la-plus"></i> 关注</a></li>
-												<!-- <li><a href="#" title="" class="hre">已关注</a></li> -->
-											</ul>
 											<ul class="flw-status">
+												<li>
+													<span>获赞</span>
+													<b>500</b>
+												</li>
 												<li>
 													<span>关注</span>
 													<b>34</b>
@@ -203,148 +209,107 @@
 	                                            Http://www.GitHub.com/john...</a></li>
 	                                    </ul>
 									</div><!--user-data end-->
-									                                <div class="widget widget-user">
-                                    <h3 class="title-wd">热门文章</h3>
-                                    <ul>
-                                        <li>
-                                            <div class="usr-msg-details">
-                                                <div class="usr-mg-info">
-                                                    <h3>Jessica William</h3>
-                                                    <p>Graphic Designer </p>
-                                                </div><!--usr-mg-info end-->
-                                            </div>
-                                            <span><img src="../static/images/price1.png" alt="">1185</span>
-                                        </li>
-                                        <li>
-                                            <div class="usr-msg-details">
-                                                <div class="usr-mg-info">
-                                                    <h3>John Doe</h3>
-                                                    <p>PHP Developer</p>
-                                                </div><!--usr-mg-info end-->
-                                            </div>
-                                            <span><img src="../static/images/price2.png" alt="">1165</span>
-                                        </li>
-                                        <li>
-                                            <div class="usr-msg-details">
-                                                <div class="usr-mg-info">
-                                                    <h3>Poonam</h3>
-                                                    <p>Wordpress Developer </p>
-                                                </div><!--usr-mg-info end-->
-                                            </div>
-                                            <span><img src="../static/images/price3.png" alt="">1120</span>
-                                        </li>
-                                        <li>
-                                            <div class="usr-msg-details">
-                                                <div class="usr-mg-info">
-                                                    <h3>Bill Gates</h3>
-                                                    <p>C & C++ Developer </p>
-                                                </div><!--usr-mg-info end-->
-                                            </div>
-                                            <span><img src="../static/images/price4.png" alt="">1009</span>
-                                        </li>
-                                    </ul>
-                                </div><!--widget-user end-->
-                                <div class="widget widget-user">
-		                            <h3 class="title-wd">标签</h3>
-		                            <ul class="classification quest-tags1">
-		                                <li>
+                                	<div class="widget widget-user">
+			                            <h3 class="title-wd">标签</h3>
+			                            <ul class="classification quest-tags1">
+			                                <li>
 
-		                                    <div class="usr-msg-details">
-		                                        <div class="usr-mg-info">
-		                                            <h3><a href="#" title="">c++</a></h3>
-		                                        </div><!--usr-mg-info end-->
-		                                    </div>
-		                                    <span>11篇</span>
-		                                </li>
-		                                <li>
+			                                    <div class="usr-msg-details">
+			                                        <div class="usr-mg-info">
+			                                            <h3><a href="#" title="">c++</a></h3>
+			                                        </div><!--usr-mg-info end-->
+			                                    </div>
+			                                    <span>11篇</span>
+			                                </li>
+			                                <li>
 
-		                                    <div class="usr-msg-details">
-		                                        <div class="usr-mg-info">
-		                                            <h3><a href="#" title="">Work</a></h3>
-		                                        </div><!--usr-mg-info end-->
-		                                    </div>
-		                                    <span>11篇</span>
-		                                </li>
-		                                <li>
+			                                    <div class="usr-msg-details">
+			                                        <div class="usr-mg-info">
+			                                            <h3><a href="#" title="">Work</a></h3>
+			                                        </div><!--usr-mg-info end-->
+			                                    </div>
+			                                    <span>11篇</span>
+			                                </li>
+			                                <li>
 
-		                                    <div class="usr-msg-details">
-		                                        <div class="usr-mg-info">
-		                                            <h3><a href="#" title="">Php</a></h3>
-		                                        </div><!--usr-mg-info end-->
-		                                    </div>
-		                                    <span>11篇</span>
-		                                </li>
-		                                <li>
+			                                    <div class="usr-msg-details">
+			                                        <div class="usr-mg-info">
+			                                            <h3><a href="#" title="">Php</a></h3>
+			                                        </div><!--usr-mg-info end-->
+			                                    </div>
+			                                    <span>11篇</span>
+			                                </li>
+			                                <li>
 
-		                                    <div class="usr-msg-details">
-		                                        <div class="usr-mg-info">
-		                                            <h3><a href="#" title="">Design</a></h3>
-		                                        </div><!--usr-mg-info end-->
-		                                    </div>
-		                                    <span>11篇</span>
-		                                </li>
+			                                    <div class="usr-msg-details">
+			                                        <div class="usr-mg-info">
+			                                            <h3><a href="#" title="">Design</a></h3>
+			                                        </div><!--usr-mg-info end-->
+			                                    </div>
+			                                    <span>11篇</span>
+			                                </li>
 
-		                            </ul>
-		                        </div><!--widget-adver end-->
-								<div class="suggestions full-width">
-									<div class="sd-title">
-										<h3>最近访问</h3>
-										<i class="la la-ellipsis-v"></i>
-									</div><!--sd-title end-->
-									<div class="suggestions-list">
-										<div class="suggestion-usd">
-											<img src="../static/images/resources/s1.png" alt="">
-											<div class="sgt-text">
-												<h4>Jessica William</h4>
-												<span>Graphic Designer</span>
+			                            </ul>
+			                        </div><!--widget-adver end-->
+									<div class="suggestions full-width">
+										<div class="sd-title">
+											<h3>最近访问</h3>
+											<i class="la la-ellipsis-v"></i>
+										</div><!--sd-title end-->
+										<div class="suggestions-list">
+											<div class="suggestion-usd">
+												<img src="../static/images/resources/s1.png" alt="">
+												<div class="sgt-text">
+													<h4>Jessica William</h4>
+													<span>Graphic Designer</span>
+												</div>
+												<span><i class="la la-plus"></i></span>
 											</div>
-											<span><i class="la la-plus"></i></span>
-										</div>
-										<div class="suggestion-usd">
-											<img src="../static/images/resources/s2.png" alt="">
-											<div class="sgt-text">
-												<h4>John Doe</h4>
-												<span>PHP Developer</span>
+											<div class="suggestion-usd">
+												<img src="../static/images/resources/s2.png" alt="">
+												<div class="sgt-text">
+													<h4>John Doe</h4>
+													<span>PHP Developer</span>
+												</div>
+												<span><i class="la la-plus"></i></span>
 											</div>
-											<span><i class="la la-plus"></i></span>
-										</div>
-										<div class="suggestion-usd">
-											<img src="../static/images/resources/s3.png" alt="">
-											<div class="sgt-text">
-												<h4>Poonam</h4>
-												<span>Wordpress Developer</span>
+											<div class="suggestion-usd">
+												<img src="../static/images/resources/s3.png" alt="">
+												<div class="sgt-text">
+													<h4>Poonam</h4>
+													<span>Wordpress Developer</span>
+												</div>
+												<span><i class="la la-plus"></i></span>
 											</div>
-											<span><i class="la la-plus"></i></span>
-										</div>
-										<div class="suggestion-usd">
-											<img src="../static/images/resources/s4.png" alt="">
-											<div class="sgt-text">
-												<h4>Bill Gates</h4>
-												<span>C & C++ Developer</span>
+											<div class="suggestion-usd">
+												<img src="../static/images/resources/s4.png" alt="">
+												<div class="sgt-text">
+													<h4>Bill Gates</h4>
+													<span>C & C++ Developer</span>
+												</div>
+												<span><i class="la la-plus"></i></span>
 											</div>
-											<span><i class="la la-plus"></i></span>
-										</div>
-										<div class="suggestion-usd">
-											<img src="../static/images/resources/s5.png" alt="">
-											<div class="sgt-text">
-												<h4>Jessica William</h4>
-												<span>Graphic Designer</span>
+											<div class="suggestion-usd">
+												<img src="../static/images/resources/s5.png" alt="">
+												<div class="sgt-text">
+													<h4>Jessica William</h4>
+													<span>Graphic Designer</span>
+												</div>
+												<span><i class="la la-plus"></i></span>
 											</div>
-											<span><i class="la la-plus"></i></span>
-										</div>
-										<div class="suggestion-usd">
-											<img src="../static/images/resources/s6.png" alt="">
-											<div class="sgt-text">
-												<h4>John Doe</h4>
-												<span>PHP Developer</span>
+											<div class="suggestion-usd">
+												<img src="../static/images/resources/s6.png" alt="">
+												<div class="sgt-text">
+													<h4>John Doe</h4>
+													<span>PHP Developer</span>
+												</div>
+												<span><i class="la la-plus"></i></span>
 											</div>
-											<span><i class="la la-plus"></i></span>
-										</div>
-										<div class="view-more">
-											<a href="#" title="">View More</a>
-										</div>
-									</div><!--suggestions-list end-->
-								</div><!--suggestions end-->
+											<div class="view-more">
+												<a href="#" title="">View More</a>
+											</div>
+										</div><!--suggestions-list end-->
+									</div><!--suggestions end-->
 								</div><!--main-left-sidebar end-->
 							</div>
 							<div class="col-lg-8">
@@ -352,7 +317,7 @@
 									<div class="user-tab-sec">
 										<h3>John Doe</h3>
 										<div class="star-descp">
-											<span>Graphic Designer at Self Employed</span>
+											<span>个人简介：</span>
 											<ul>
 												<li><i class="fa fa-star"></i></li>
 												<li><i class="fa fa-star"></i></li>
@@ -361,24 +326,36 @@
 												<li><i class="fa fa-star-half-o"></i></li>
 											</ul>
 										</div><!--star-descp end-->
-										<div class="tab-feed st2">
+										<div class="tab-feed st2" style="margin-bottom: 25px">
 											<ul>
-												<li data-tab="saved-jobs" class="active">
-													<a href="#" title="">
-														<img src="../static/images/ic1.png" alt="">
-														<span style="font-size: 16px;font-weight: 590;">笔记</span>
-													</a>
-												</li>
-												<li data-tab="info-dd">
+												<li data-tab="current-notes" class="active">
 													<a href="#" title="">
 														<img src="../static/images/ic2.png" alt="">
-														<span>Info</span>
+														<span style="font-size: 16px;font-weight: 590;">最新</span>
+													</a>
+												</li>
+												<li data-tab="hot-notes">
+													<a href="#" title="">
+														<img src="../static/images/ic1.png" alt="">
+														<span style="font-size: 16px;font-weight: 590;">热门</span>
+													</a>
+												</li>
+												<li data-tab="like-notes">
+													<a href="#" title="">
+														<img src="../static/images/ic1.png" alt="">
+														<span style="font-size: 16px;font-weight: 590;">喜欢</span>
+													</a>
+												</li>
+												<li data-tab="info-notes">
+													<a href="#" title="">
+														<img src="../static/images/ic5.png" alt="">
+														<span style="font-size: 16px;font-weight: 590;">Info</span>
 													</a>
 												</li>
 											</ul>
 										</div><!-- tab-feed end-->
 									</div><!--user-tab-sec end-->
-									<div class="product-feed-tab current" id="saved-jobs">
+									<div class="product-feed-tab current" id="current-notes">
 										<div class="posts-section">
 											<div class="post-bar">
 												<div class="post_topbar">
@@ -392,30 +369,13 @@
 													<div class="ed-opts">
 														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
+															<li><a href="#" title="">Edit Note</a></li>
+															<li><a href="#" title="">Delete Note</a></li>
 														</ul>
 													</div>
 												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="../static/images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="../static/images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-													</ul>
-												</div>
 												<div class="job_descp">
-													<h3>Senior Wordpress Developer</h3>
-													<ul class="job-dt">
-														<li><a href="#" title="">Full Time</a></li>
-														<li><span>$30 / hr</span></li>
-													</ul>
+													<h3>我是标题</h3>
 													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
 													<ul class="skill-tags">
 														<li><a href="#" title="">HTML</a></li>
@@ -449,87 +409,13 @@
 													<div class="ed-opts">
 														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
+															<li><a href="#" title="">Edit Note</a></li>
+															<li><a href="#" title="">Delete Note</a></li>
 														</ul>
 													</div>
 												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="../static/images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="../static/images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-													</ul>
-												</div>
 												<div class="job_descp">
-													<h3>Senior Wordpress Developer</h3>
-													<ul class="job-dt">
-														<li><a href="#" title="">Full Time</a></li>
-														<li><span>$30 / hr</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li> 	
-													</ul>
-												</div>
-												<div class="job-status-bar">
-													<ul class="like-com">
-														<li>
-															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="../static/images/liked-img.png" alt="">
-															<span>25</span>
-														</li> 
-														<li><a href="#" title="" class="com"><img src="../static/images/com.png" alt=""> Comment 15</a></li>
-													</ul>
-													<a><i class="la la-eye"></i>Views 50</a>
-												</div>
-											</div><!--post-bar end-->
-											<div class="post-bar">
-												<div class="post_topbar">
-													<div class="usy-dt">
-														<img src="../static/images/resources/us-pc2.png" alt="">
-														<div class="usy-name">
-															<h3>John Doe</h3>
-															<span><img src="../static/images/clock.png" alt="">3 min ago</span>
-														</div>
-													</div>
-													<div class="ed-opts">
-														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="../static/images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="../static/images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-													</ul>
-												</div>
-												<div class="job_descp">
-													<h3>Senior Wordpress Developer</h3>
-													<ul class="job-dt">
-														<li><a href="#" title="">Full Time</a></li>
-														<li><span>$30 / hr</span></li>
-													</ul>
+													<h3>我是标题</h3>
 													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
 													<ul class="skill-tags">
 														<li><a href="#" title="">HTML</a></li>
@@ -563,30 +449,53 @@
 													<div class="ed-opts">
 														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
+															<li><a href="#" title="">Edit Note</a></li>
+															<li><a href="#" title="">Delete Note</a></li>
 														</ul>
 													</div>
 												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="../static/images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="../static/images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
+												<div class="job_descp">
+													<h3>我是标题</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+													<ul class="skill-tags">
+														<li><a href="#" title="">HTML</a></li>
+														<li><a href="#" title="">PHP</a></li>
+														<li><a href="#" title="">CSS</a></li>
+														<li><a href="#" title="">Javascript</a></li>
+														<li><a href="#" title="">Wordpress</a></li> 	
 													</ul>
 												</div>
-												<div class="job_descp">
-													<h3>Senior Wordpress Developer</h3>
-													<ul class="job-dt">
-														<li><a href="#" title="">Full Time</a></li>
-														<li><span>$30 / hr</span></li>
+												<div class="job-status-bar">
+													<ul class="like-com">
+														<li>
+															<a href="#"><i class="la la-heart"></i> Like</a>
+															<img src="../static/images/liked-img.png" alt="">
+															<span>25</span>
+														</li> 
+														<li><a href="#" title="" class="com"><img src="../static/images/com.png" alt=""> Comment 15</a></li>
 													</ul>
+													<a><i class="la la-eye"></i>Views 50</a>
+												</div>
+											</div><!--post-bar end-->
+											<div class="post-bar">
+												<div class="post_topbar">
+													<div class="usy-dt">
+														<img src="../static/images/resources/us-pic.png" alt="">
+														<div class="usy-name">
+															<h3>John Doe</h3>
+															<span><img src="../static/images/clock.png" alt="">3 min ago</span>
+														</div>
+													</div>
+													<div class="ed-opts">
+														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
+														<ul class="ed-options">
+															<li><a href="#" title="">Edit Note</a></li>
+															<li><a href="#" title="">Delete Note</a></li>
+														</ul>
+													</div>
+												</div>
+												<div class="job_descp">
+													<h3>我是标题</h3>
 													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
 													<ul class="skill-tags">
 														<li><a href="#" title="">HTML</a></li>
@@ -613,7 +522,313 @@
 											</div><!--process-comm end-->
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
-									<div class="product-feed-tab" id="info-dd">
+									<div class="product-feed-tab" id="hot-notes">
+										<div class="posts-section">
+											<div class="post-bar">
+												<div class="post_topbar">
+													<div class="usy-dt">
+														<img src="../static/images/resources/us-pic.png" alt="">
+														<div class="usy-name">
+															<h3>John Doe</h3>
+															<span><img src="../static/images/clock.png" alt="">3 min ago</span>
+														</div>
+													</div>
+													<div class="ed-opts">
+														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
+														<ul class="ed-options">
+															<li><a href="#" title="">Edit Note</a></li>
+															<li><a href="#" title="">Delete Note</a></li>
+														</ul>
+													</div>
+												</div>
+												<div class="job_descp">
+													<h3>我是标题</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+													<ul class="skill-tags">
+														<li><a href="#" title="">HTML</a></li>
+														<li><a href="#" title="">PHP</a></li>
+														<li><a href="#" title="">CSS</a></li>
+														<li><a href="#" title="">Javascript</a></li>
+														<li><a href="#" title="">Wordpress</a></li> 	
+													</ul>
+												</div>
+												<div class="job-status-bar">
+													<ul class="like-com">
+														<li>
+															<a href="#"><i class="la la-heart"></i> Like</a>
+															<img src="../static/images/liked-img.png" alt="">
+															<span>25</span>
+														</li> 
+														<li><a href="#" title="" class="com"><img src="../static/images/com.png" alt=""> Comment 15</a></li>
+													</ul>
+													<a><i class="la la-eye"></i>Views 50</a>
+												</div>
+											</div><!--post-bar end-->
+											<div class="post-bar">
+												<div class="post_topbar">
+													<div class="usy-dt">
+														<img src="../static/images/resources/us-pic.png" alt="">
+														<div class="usy-name">
+															<h3>John Doe</h3>
+															<span><img src="../static/images/clock.png" alt="">3 min ago</span>
+														</div>
+													</div>
+													<div class="ed-opts">
+														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
+														<ul class="ed-options">
+															<li><a href="#" title="">Edit Note</a></li>
+															<li><a href="#" title="">Delete Note</a></li>
+														</ul>
+													</div>
+												</div>
+												<div class="job_descp">
+													<h3>我是标题</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+													<ul class="skill-tags">
+														<li><a href="#" title="">HTML</a></li>
+														<li><a href="#" title="">PHP</a></li>
+														<li><a href="#" title="">CSS</a></li>
+														<li><a href="#" title="">Javascript</a></li>
+														<li><a href="#" title="">Wordpress</a></li> 	
+													</ul>
+												</div>
+												<div class="job-status-bar">
+													<ul class="like-com">
+														<li>
+															<a href="#"><i class="la la-heart"></i> Like</a>
+															<img src="../static/images/liked-img.png" alt="">
+															<span>25</span>
+														</li> 
+														<li><a href="#" title="" class="com"><img src="../static/images/com.png" alt=""> Comment 15</a></li>
+													</ul>
+													<a><i class="la la-eye"></i>Views 50</a>
+												</div>
+											</div><!--post-bar end-->
+											<div class="post-bar">
+												<div class="post_topbar">
+													<div class="usy-dt">
+														<img src="../static/images/resources/us-pic.png" alt="">
+														<div class="usy-name">
+															<h3>John Doe</h3>
+															<span><img src="../static/images/clock.png" alt="">3 min ago</span>
+														</div>
+													</div>
+													<div class="ed-opts">
+														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
+														<ul class="ed-options">
+															<li><a href="#" title="">Edit Note</a></li>
+															<li><a href="#" title="">Delete Note</a></li>
+														</ul>
+													</div>
+												</div>
+												<div class="job_descp">
+													<h3>我是标题</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+													<ul class="skill-tags">
+														<li><a href="#" title="">HTML</a></li>
+														<li><a href="#" title="">PHP</a></li>
+														<li><a href="#" title="">CSS</a></li>
+														<li><a href="#" title="">Javascript</a></li>
+														<li><a href="#" title="">Wordpress</a></li> 	
+													</ul>
+												</div>
+												<div class="job-status-bar">
+													<ul class="like-com">
+														<li>
+															<a href="#"><i class="la la-heart"></i> Like</a>
+															<img src="../static/images/liked-img.png" alt="">
+															<span>25</span>
+														</li> 
+														<li><a href="#" title="" class="com"><img src="../static/images/com.png" alt=""> Comment 15</a></li>
+													</ul>
+													<a><i class="la la-eye"></i>Views 50</a>
+												</div>
+											</div><!--post-bar end-->
+											<div class="post-bar">
+												<div class="post_topbar">
+													<div class="usy-dt">
+														<img src="../static/images/resources/us-pic.png" alt="">
+														<div class="usy-name">
+															<h3>John Doe</h3>
+															<span><img src="../static/images/clock.png" alt="">3 min ago</span>
+														</div>
+													</div>
+													<div class="ed-opts">
+														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
+														<ul class="ed-options">
+															<li><a href="#" title="">Edit Note</a></li>
+															<li><a href="#" title="">Delete Note</a></li>
+														</ul>
+													</div>
+												</div>
+												<div class="job_descp">
+													<h3>我是标题</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+													<ul class="skill-tags">
+														<li><a href="#" title="">HTML</a></li>
+														<li><a href="#" title="">PHP</a></li>
+														<li><a href="#" title="">CSS</a></li>
+														<li><a href="#" title="">Javascript</a></li>
+														<li><a href="#" title="">Wordpress</a></li> 	
+													</ul>
+												</div>
+												<div class="job-status-bar">
+													<ul class="like-com">
+														<li>
+															<a href="#"><i class="la la-heart"></i> Like</a>
+															<img src="../static/images/liked-img.png" alt="">
+															<span>25</span>
+														</li> 
+														<li><a href="#" title="" class="com"><img src="../static/images/com.png" alt=""> Comment 15</a></li>
+													</ul>
+													<a><i class="la la-eye"></i>Views 50</a>
+												</div>
+											</div><!--post-bar end-->
+											<div class="process-comm">
+												<a href="#" title=""><img src="../static/images/process-icon.png" alt=""></a>
+											</div><!--process-comm end-->
+										</div><!--posts-section end-->
+									</div><!--product-feed-tab end-->
+									<div class="product-feed-tab" id="like-notes">
+										<div class="posts-section">
+											<div class="post-bar">
+												<div class="post_topbar">
+													<div class="usy-dt">
+														<img src="../static/images/resources/us-pic.png" alt="">
+														<div class="usy-name">
+															<h3>John Doe</h3>
+															<span><img src="../static/images/clock.png" alt="">3 min ago</span>
+														</div>
+													</div>
+												</div>
+												<div class="job_descp">
+													<h3>我是标题</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+													<ul class="skill-tags">
+														<li><a href="#" title="">HTML</a></li>
+														<li><a href="#" title="">PHP</a></li>
+														<li><a href="#" title="">CSS</a></li>
+														<li><a href="#" title="">Javascript</a></li>
+														<li><a href="#" title="">Wordpress</a></li> 	
+													</ul>
+												</div>
+												<div class="job-status-bar">
+													<ul class="like-com">
+														<li>
+															<a href="#"><i class="la la-heart"></i> Like</a>
+															<img src="../static/images/liked-img.png" alt="">
+															<span>25</span>
+														</li> 
+														<li><a href="#" title="" class="com"><img src="../static/images/com.png" alt=""> Comment 15</a></li>
+													</ul>
+													<a><i class="la la-eye"></i>Views 50</a>
+												</div>
+											</div><!--post-bar end-->
+											<div class="post-bar">
+												<div class="post_topbar">
+													<div class="usy-dt">
+														<img src="../static/images/resources/us-pic.png" alt="">
+														<div class="usy-name">
+															<h3>John Doe</h3>
+															<span><img src="../static/images/clock.png" alt="">3 min ago</span>
+														</div>
+													</div>
+												</div>
+												<div class="job_descp">
+													<h3>我是标题</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+													<ul class="skill-tags">
+														<li><a href="#" title="">HTML</a></li>
+														<li><a href="#" title="">PHP</a></li>
+														<li><a href="#" title="">CSS</a></li>
+														<li><a href="#" title="">Javascript</a></li>
+														<li><a href="#" title="">Wordpress</a></li> 	
+													</ul>
+												</div>
+												<div class="job-status-bar">
+													<ul class="like-com">
+														<li>
+															<a href="#"><i class="la la-heart"></i> Like</a>
+															<img src="../static/images/liked-img.png" alt="">
+															<span>25</span>
+														</li> 
+														<li><a href="#" title="" class="com"><img src="../static/images/com.png" alt=""> Comment 15</a></li>
+													</ul>
+													<a><i class="la la-eye"></i>Views 50</a>
+												</div>
+											</div><!--post-bar end-->
+											<div class="post-bar">
+												<div class="post_topbar">
+													<div class="usy-dt">
+														<img src="../static/images/resources/us-pic.png" alt="">
+														<div class="usy-name">
+															<h3>John Doe</h3>
+															<span><img src="../static/images/clock.png" alt="">3 min ago</span>
+														</div>
+													</div>
+												</div>
+												<div class="job_descp">
+													<h3>我是标题</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+													<ul class="skill-tags">
+														<li><a href="#" title="">HTML</a></li>
+														<li><a href="#" title="">PHP</a></li>
+														<li><a href="#" title="">CSS</a></li>
+														<li><a href="#" title="">Javascript</a></li>
+														<li><a href="#" title="">Wordpress</a></li> 	
+													</ul>
+												</div>
+												<div class="job-status-bar">
+													<ul class="like-com">
+														<li>
+															<a href="#"><i class="la la-heart"></i> Like</a>
+															<img src="../static/images/liked-img.png" alt="">
+															<span>25</span>
+														</li> 
+														<li><a href="#" title="" class="com"><img src="../static/images/com.png" alt=""> Comment 15</a></li>
+													</ul>
+													<a><i class="la la-eye"></i>Views 50</a>
+												</div>
+											</div><!--post-bar end-->
+											<div class="post-bar">
+												<div class="post_topbar">
+													<div class="usy-dt">
+														<img src="../static/images/resources/us-pic.png" alt="">
+														<div class="usy-name">
+															<h3>John Doe</h3>
+															<span><img src="../static/images/clock.png" alt="">3 min ago</span>
+														</div>
+													</div>
+												</div>
+												<div class="job_descp">
+													<h3>我是标题</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+													<ul class="skill-tags">
+														<li><a href="#" title="">HTML</a></li>
+														<li><a href="#" title="">PHP</a></li>
+														<li><a href="#" title="">CSS</a></li>
+														<li><a href="#" title="">Javascript</a></li>
+														<li><a href="#" title="">Wordpress</a></li> 	
+													</ul>
+												</div>
+												<div class="job-status-bar">
+													<ul class="like-com">
+														<li>
+															<a href="#"><i class="la la-heart"></i> Like</a>
+															<img src="../static/images/liked-img.png" alt="">
+															<span>25</span>
+														</li> 
+														<li><a href="#" title="" class="com"><img src="../static/images/com.png" alt=""> Comment 15</a></li>
+													</ul>
+													<a><i class="la la-eye"></i>Views 50</a>
+												</div>
+											</div><!--post-bar end-->
+											<div class="process-comm">
+												<a href="#" title=""><img src="../static/images/process-icon.png" alt=""></a>
+											</div><!--process-comm end-->
+										</div><!--posts-section end-->
+									</div><!--product-feed-tab end-->
+									<div class="product-feed-tab" id="info-notes">
 										<div class="user-profile-ov">
 											<h3><a href="#" title="" class="overview-open">Overview</a> <a href="#" title="" class="overview-open"><i class="fa fa-pencil"></i></a></h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur tincidunt. Vivamus consectetur aliquam lectus commodo viverra. Nunc eu augue nec arcu efficitur faucibus. Aliquam accumsan ac magna convallis bibendum. Quisque laoreet augue eget augue fermentum scelerisque. Vivamus dignissim mollis est dictum blandit. Nam porta auctor neque sed congue. Nullam rutrum eget ex at maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget vestibulum lorem.</p>
@@ -828,7 +1043,7 @@
             }
         });
         $('div.go-top').click(function() {
-            $('html, body').animate({scrollTop: 0}, 1000);
+            $('html, body').animate({scrollTop: 0}, 500);
         });
     });
 </script>
