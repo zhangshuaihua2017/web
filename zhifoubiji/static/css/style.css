@@ -276,12 +276,7 @@ header {
 	/*width: 40px;*/width: auto;
 	margin-right: 14px;
 	margin-top: 10px;
-}
-.logo-text{
-	font-weight: bold;
-	font-size: 30px;
-	color: #fff;
-}
+} 
 .logo.pd-btm {
 	padding-bottom: 10px;
 }
@@ -4435,14 +4430,18 @@ a:hover {
 }
 .noty-user-img {
 	float: left;
-	width: 35px;
+	width: 7%;
 }
 .noty-user-img img {
-	width: 100%;
+	width: 35px;
+}
+.custom-notification-delete{
+	width: 5%;
+	float: right;
 }
 .notification-info {
 	float: left;
-	width: auto;
+	width: 88%;
 	padding-left: 10px;
 }
 .notification-info h3 {
@@ -4495,9 +4494,13 @@ a:hover {
 	margin-bottom: 3px;
 }
 .request-info span {
-	color: #686868;
-	font-size: 12px;
 	display: inline-block;
+	color: #b2b2b2;
+	font-size: 12px;
+	font-weight: 600;
+	/*color: #686868;
+	font-size: 12px;
+	display: inline-block;*/
 }
 .accept-feat {
 	float: right;
@@ -5452,7 +5455,7 @@ a:hover {
 }
 
 .myfooter{
-    margin-top: -50px;
+    margin-bottom: 0px;
     height: 50px;
     background-color: #eee;
 }
@@ -5514,7 +5517,7 @@ div .go-top div .arrow {
     border-radius: 30px;
     padding: 7px 15px;
 }
-.request-info h3{
+/*.request-info h3{
     display: inline-block;
     color: #ffffff;
     background-color: #53d690;
@@ -5524,7 +5527,7 @@ div .go-top div .arrow {
     -o-border-radius: 30px;
     border-radius: 30px;
     padding: 7px 15px;
-}
+}*/
 .cpp-fiels{
     float: left;
     width: 100%;
