@@ -1782,6 +1782,10 @@ main {
 	font-weight: 600;
 	margin-bottom: 10px;
 }
+.job-details h3 a:hover{
+	text-decoration:underline;
+	color: black;
+}
 .job-details p {
 	color: #686868;
 	font-size: 14px;
@@ -3562,6 +3566,9 @@ a:hover {
 }
 .follow {
 	background-color: #53d690;
+}
+.custome-close-follow {
+	background-color: #FF6700;
 }
 .message-us {
 	background-color: #e44d3a;
@@ -5549,4 +5556,46 @@ div .go-top div .arrow {
     width: 100%;
     position: relative;
     border-bottom: 1px solid #e5e5e5;
+}
+.custom-underline {
+	text-decoration:underline;
+}
+.customer-notification-title{
+	color: #000000;
+	font-size: 14px;
+	font-weight: 600;
+	border: 0;
+	padding: 0;
+	margin-bottom: 6px;
+}
+.custom-color {
+	color: black;
+}
+
+#custom-refresh:hover {
+	cursor:pointer;
+	animation: rotate 4s infinite;
+    -webkit-animation: rotate 1s infinite; /*Safari and Chrome*/ 
+}
+@keyframes rotate {
+    0%{
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg);     /* IE 9 */
+        -moz-transform:rotate(0deg);    /* Firefox */
+        -o-transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+        -ms-transform:rotate(360deg);   /* IE 9 */
+        -moz-transform:rotate(360deg);  /* Firefox */
+        -o-transform:rotate(360deg);    
+    }
+}
+@-webkit-keyframes rotate {
+    0%{
+        -moz-transform:rotate(0deg);
+    }
+    100%{
+        -moz-transform:rotate(360deg);
+    }
 }
