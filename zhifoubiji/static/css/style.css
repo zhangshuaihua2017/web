@@ -557,7 +557,7 @@ nav > ul > li > a:hover {
 	position: absolute;
 	top: 100%;
 	right: 0;
-	width: 240px;
+	width: 160px;
 	background-color: #fff;
 	border-left: 1px solid #e5e5e5;
 	border-bottom: 1px solid #e5e5e5;
@@ -580,15 +580,39 @@ nav > ul > li > a:hover {
 	visibility: visible;
 	z-index: 9999;
 }
-.user-account-settingss > h3 {
-	color: #000000;
-	font-size: 16px;
-	font-weight: 600;
+
+.custom-user-account-dropdown{
+	font-size: 14px;
+	font-weight: 400;
 	float: left;
 	width: 100%;
-	border-bottom: 1px solid #e5e5e5;
-	padding: 15px 20px;
+	/*border-bottom: 1px solid #e5e5e5;*/
+	padding: 20px 0px 20px 0px;
+	color: black;
+
+	text-align: center;
+	background-color: #FF6700
 }
+.custom-user-account-dropdown:hover {
+	background-color: #fff;
+}
+/*.user-account-settingss > h3 {
+	font-size: 14px;
+	font-weight: 400;
+	float: left;
+	width: 100%;
+	padding: 20px 0px 20px 0px;
+
+	text-align: center;
+	background-color: #FF6700
+}
+.user-account-settingss > h3 > a{
+	color: black;
+}
+.user-account-settingss > h3:hover {
+	background-color: #fff;
+	cursor: pointer;
+}*/
 .on-off-status {
 	float: left;
 	width: 100%;
@@ -5524,17 +5548,17 @@ div .go-top div .arrow {
     border-radius: 30px;
     padding: 7px 15px;
 }
-/*.request-info h3{
-    display: inline-block;
-    color: #ffffff;
-    background-color: #53d690;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
-    border-radius: 30px;
-    padding: 7px 15px;
-}*/
+.custom-tag{
+    display: inline-block !important;
+    color: #ffffff !important;
+    background-color: #53d690 !important;
+    -webkit-border-radius: 30px !important;
+    -moz-border-radius: 30px !important;
+    -ms-border-radius: 30px !important;
+    -o-border-radius: 30px !important;
+    border-radius: 30px !important;
+    padding: 7px 15px !important;
+}
 .cpp-fiels{
     float: left;
     width: 100%;
@@ -5543,6 +5567,7 @@ div .go-top div .arrow {
 .cpp-fiels input{
     height: 40px;
     padding: 0px 30px;
+    font-size: 14px;
 }
 .cpp-fiels i{
     position: absolute;
@@ -5598,4 +5623,47 @@ div .go-top div .arrow {
     100%{
         -moz-transform:rotate(360deg);
     }
+}
+
+.custom-camera {
+	position: relative;
+}
+.custom-camera > img{
+	width: 90px;
+	height: 90px;
+}
+.custom-camera > a {
+	width: 40px;
+	height: 40px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-ms-border-radius: 100px;
+	-o-border-radius: 100px;
+	border-radius: 100px;
+	color: #fff;
+	line-height: 40px;
+	background-color: #FF6700;
+	position: absolute;
+	top: 0;
+	left: 60%;
+}
+.custom-camera > a:hover{
+	color: #FF6700;
+}
+
+.custom-cover-sec > a {
+	display: inline-block;
+	color: #e44d3a;
+	font-size: 16px;
+	background-color: #fff;
+	border: 1px solid #e44d3a;
+	position: absolute;
+	top: 30px;
+	left: 100%;
+	padding: 10px 15px 10px 40px;
+	font-weight: 600;
+	margin-right: 15px;
+}
+.custom-cover-sec > a i {
+	color: #FF6700;
 }
