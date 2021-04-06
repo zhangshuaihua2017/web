@@ -1270,6 +1270,7 @@ main {
 }
 .job_descp > p a {
 	color: #e44d3a;
+	/*color: #FF6700;*/
 	font-weight: 600;
 }
 

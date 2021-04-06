@@ -1962,8 +1962,9 @@ select {
 /* ================= sign-in ================ */
 
 .sign-in {
-	background-color: #FF6700;
+	/*background-color: #FF6700;*/
 	/*background-color: #e75348;*/
+	background-color: #f1f1f1;
 }
 .sign-in-page {
 	float: left;
@@ -2128,7 +2129,8 @@ select {
 	border-radius: 0 4px 4px 0;
 }
 .sign-control li.current a {
-	background-color: #e44d3a;
+	/*background-color: #e44d3a;*/
+	background-color: #FF6700;
 	color: #fff;
 }
 .sign_in_sec {
