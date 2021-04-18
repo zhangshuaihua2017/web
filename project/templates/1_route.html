@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+<script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+     <div id='test'>
+        <button @click='goTo()'>点击跳转4</button>
+     </div>
+    <script>
+        var vm = new Vue({
+            el:'#test',
+            methods:{
+                goTo(){
+                 //直接跳转
+                 // this.$router.push('/testDemo');
+                  
+                 //带参数跳转
+                 this.$router.push({path:'/static/1_yibu.html',query:{setid:123456}});
+                 // this.$router.push({name:'testDemo',params:{setid:111222}});
+                }
+            }
+        });
+    </script>
+</body>
+</html>
