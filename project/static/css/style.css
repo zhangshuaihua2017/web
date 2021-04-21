@@ -4391,12 +4391,14 @@ a:hover {
 	font-weight: 600;
 	background: none;
 	cursor: pointer;
+	/*background-color: #17a2b8;*/
+	/*color: #fff;*/
 }
-.save-stngs ul li button:hover {
-	background-color: #e44d3a;
+/*.save-stngs ul li button:hover {
+	background-color: #FF6700;
 	color: #fff;
 	border-color: transparent;
-}
+}*/
 
 /* =============== Password Update ============ */
 
@@ -4424,7 +4426,7 @@ a:hover {
 }
 .cp-field input {
 	height: 40px;
-	padding: 0 40px;
+	padding: 0 10px;
 }
 .cp-field input,
 .cp-field textarea {

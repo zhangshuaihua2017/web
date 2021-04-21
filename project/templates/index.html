@@ -18,9 +18,70 @@
 <link rel="stylesheet" type="text/css" href="../static/css/style.css"> 
 <link rel="stylesheet" type="text/css" href="../static/css/responsive.css">
 
-<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
-<script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
-<script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+<script type="text/javascript">
+	var sessionStorage = window.sessionStorage;
+</script>
+<script type="text/javascript">
+	window.onload = function(){
+		//学科
+		var subject = new Vue({
+			  el: '#subject',
+			  data:{
+			      subjects1:[],//一级学科
+			      subjects2:[],//二级学科
+			      subject1:-1, //一级学科选中
+			      subject2:-1, //二级学科选中
+			  },
+			  watch:{ //监听学科
+		        subject1:function(val) {
+		        	if(val == -1){
+						this.subject2 = -1;
+		        		return;
+		        	}
+		            for (var i = this.subjects1.length - 1; i >= 0; i--) {
+						if(val == this.subjects1[i].id){
+							this.subjects2 = this.subjects1[i].child;
+							this.subject2 = -1;
+							return;
+						}
+					}
+		        }
+		     }
+		});
+		//标签
+		var noteTag = new Vue({
+			  el: '#noteTag',
+			  data:{
+				  noteTags:[{name:''}]
+			  }
+		});
+
+
+		//学科加载
+		$.ajax({
+            type: "GET",
+            url: "/types",
+            data: {},
+            dataType: "json",
+            success: function(data){
+	            var result = data.data;
+				subject.subjects1 = result;
+	        }
+	    });
+		//标签加载
+		$.ajax({
+            type: "GET",
+            url: "/tags",
+            data: {page:1, size:4},
+            dataType: "json",
+            success: function(data){
+	            var result = data.data;
+	            noteTag.noteTags = result.content;
+	            console.log(noteTag.noteTags);
+	        }
+	    });
+	}
+</script>
 </head> 
 
 
@@ -68,7 +129,7 @@
 					</nav>
 					<div class="search-bar">
 						<form>
-							<input type="text" name="search" placeholder="Search...">
+							<input type="text" name="search" placeholder="Search..." class="form-control">
 							<button type="submit"><i class="la la-search" style="color: #FF6700"></i></button>
 						</form>
 					</div><!--search-bar end-->
@@ -120,9 +181,11 @@
 					<div class="main-section-data">
 						<div class="row">
 							<div class="col-lg-3">
-								<div class="filter-secs" style="margin-bottom: 20px">
+								<div id="subject"class="filter-secs" style="margin-bottom: 20px">
 									<div class="filter-heading">
 										<h3>学科</h3>
+										<button id="btnNoteResearchByType" type="button" class="btn btn-default pull-right" style="margin-top: -5px;padding: 0px">Search</button>
+										<!-- <a href="#" title="">Search</a> -->
 									</div><!--filter-heading end-->
 									<div class="paddy">
 										<div class="filter-dd">
@@ -131,10 +194,11 @@
 												<!-- <a href="#" title="">Clear</a> -->
 											</div>
 											<form class="job-tp">
-												<select class="form-control">
-													<option>工学</option>
-													<option>经济学</option>
-													<option>理学</option>
+												<select id="subject1" class="form-control" v-model="subject1">
+													<option v-bind:value="-1">请选择学科</option>
+													<option v-for="site in subjects1" v-bind:value="site.id">
+														{{site.name}}
+													</option>
 												</select>
 												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 											</form>
@@ -145,61 +209,26 @@
 												<!-- <a href="#" title="">Clear</a> -->
 											</div>
 											<form class="job-tp">
-												<select class="form-control">
-													<option>机械工程</option>
-													<option>计算机科学与技术</option>
-													<option>理论经济</option>
-													<option>应用经济</option>
-													<option>数学</option>
-													<option>物理学</option>
+												<select id="subject2" class="form-control" v-model="subject2">
+													<option id="tests" v-bind:value="-1">请选择学科</option>
+													<option v-for="site in subjects2" v-bind:value="site.id">
+														{{site.name}}
+													</option>
 												</select>
 												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 											</form>
 										</div>
-										<div class="filter-dd">
-											<div class="filter-ttl">
-												<h3>三级学科</h3>
-												<!-- <a href="#" title="">Clear</a> -->
-											</div>
-											<form class="job-tp">
-												<select class="form-control">
-													<option>机械设计及理论</option>
-													<option>机械制造及其自动化</option>
-													<option>过程设备与机械</option>
-
-													<option>计算机应用技术</option>
-													<option>计算机系统结构</option>
-													<option>计算机软件与理论</option>
-
-													<option>发展经济学</option>
-													<option>法律经济学</option>
-													<option>管理经济学</option>
-
-													<option>产业经济学</option>
-													<option>城市经济学</option>
-													<option>传媒经济学</option>
-
-													<option>基础数学</option>
-													<option>计算数学</option>
-													<option>量子信息学</option>
-
-													<option>计算物理</option>
-													<option>理论物理</option>
-													<option>精密测量物理</option>
-												</select>
-												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-											</form>
-										</div>
+										<!-- <button id="btnRegister" type="button" class="btn btn-default pull-right" style="margin-bottom: 10px;border:solid 1px #bcbcbc">search</button> -->
 									</div>
 								</div><!--filter-secs end-->
-								<div class="widget widget-user">
+								<div id="noteTag" class="widget widget-user">
 		                            <h3 class="title-wd">热门标签</h3>
 		                            <ul class="classification quest-tags1">
 		                                <li>
 
 		                                    <div class="usr-msg-details">
 		                                        <div class="usr-mg-info">
-		                                            <h3><a href="#" title="">c++</a></h3>
+		                                            <h3><a href="#" title="">{{noteTags[0].name}}</a></h3>
 		                                        </div><!--usr-mg-info end-->
 		                                    </div>
 		                                    <!-- <span>11篇</span> -->
@@ -209,7 +238,7 @@
 
 		                                    <div class="usr-msg-details">
 		                                        <div class="usr-mg-info">
-		                                            <h3><a href="#" title="">Work</a></h3>
+		                                            <h3><a href="#" title="">{{noteTags[1].name}}</a></h3>
 		                                        </div><!--usr-mg-info end-->
 		                                    </div>
 		                                    <!-- <span>11篇</span> -->
@@ -219,7 +248,7 @@
 
 		                                    <div class="usr-msg-details">
 		                                        <div class="usr-mg-info">
-		                                            <h3><a href="#" title="">Php</a></h3>
+		                                            <h3><a href="#" title="">{{noteTags[2].name}}</a></h3>
 		                                        </div><!--usr-mg-info end-->
 		                                    </div>
 		                                    <!-- <span>11篇</span> -->
@@ -229,7 +258,7 @@
 
 		                                    <div class="usr-msg-details">
 		                                        <div class="usr-mg-info">
-		                                            <h3><a href="#" title="">Design</a></h3>
+		                                            <h3><a href="#" title="">{{noteTags[3].name}}</a></h3>
 		                                        </div><!--usr-mg-info end-->
 		                                    </div>
 		                                    <!-- <span>11篇</span> -->
@@ -462,13 +491,31 @@
 <script type="text/javascript" src="../static/js/scrollbar.js"></script>
 <script type="text/javascript" src="../static/js/script.js"></script>
 
+<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+<script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
 <script type="text/javascript">
-	var sessionStorage = window.sessionStorage;
-    console.log(sessionStorage.getItem("header1"));
-    console.log(sessionStorage.getItem("header2"));
+	var public_path = "/user/templates/";
+</script>
+<script>
+	//笔记查询
+	$("btnNoteResearchByType").click(function(){
+		$.ajax({
+            type: "GET",
+            url: "/types",
+            data: {},
+            dataType: "json",
+            success: function(data){
+	            var result = data.data;
+				subject.subjects1 = result;
+	        }
+	    });
+    });
 </script>
 
-<script>
+
+
+<script type="text/javascript">
     //回顶部
     $(function() {
         $(window).scroll(function() {

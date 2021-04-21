@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
-    <link rel="stylesheet" type="text/css" href="../static/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/user/static/css/animate.css">
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../static/css/line-awesome.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/line-awesome-font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/user/static/css/line-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/user/static/css/line-awesome-font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" type="text/css" href="../static/lib/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="../static/lib/slick/slick-theme.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/responsive.css">
-    <link rel="stylesheet" type="text/css" href="../static/lib/editor/css/editormd.css">
-</head> 
+    <link rel="stylesheet" type="text/css" href="/user/static/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="/user/static/lib/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="/user/static/lib/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="/user/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/user/static/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="/user/static/lib/editor/css/editormd.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/9.0.3/css/autoComplete.min.css">
 
+<script type="text/javascript">
+    var sessionStorage = window.sessionStorage;
+</script>
+</head> 
 
 <body>
 
@@ -35,19 +39,19 @@
                         <ul>
                             <li>
                                 <a href="index.html" title="">
-                                    <!-- <span><img src="../static/images/icon1.png" alt=""></span> -->
+                                    <!-- <span><img src="/user/static/images/icon1.png" alt=""></span> -->
                                     首页
                                 </a>
                             </li>
                             <li>
                                 <a href="follow.html" title="">
-                                    <!-- <span><img src="../static/images/icon1.png" alt=""></span> -->
+                                    <!-- <span><img src="/user/static/images/icon1.png" alt=""></span> -->
                                     关注
                                 </a>
                             </li>
                             <li>
                                 <a href="#" title="" class="not-box-open">
-                                    <!-- <span><img src="../static/images/icon6.png" alt=""></span> -->
+                                    <!-- <span><img src="/user/static/images/icon6.png" alt=""></span> -->
                                     消息
                                 </a>
                                 <div class="notification-box msg">
@@ -65,7 +69,7 @@
                     </nav>
                     <div class="search-bar">
                         <form>
-                            <input type="text" name="search" placeholder="Search...">
+                            <input type="text" name="search" placeholder="Search..." class="form-control">
                             <button type="submit"><i class="la la-search" style="color: #FF6700"></i></button>
                         </form>
                     </div><!--search-bar end-->
@@ -76,7 +80,7 @@
 
                     <div class="user-account">
                         <div class="user-info">
-                            <img src="../static/images/resources/user.png" alt="">
+                            <img src="/user/static/images/resources/user.png" alt="">
                             <a href="#" title="">John</a>
                             <i class="la la-sort-down"></i>
                         </div>
@@ -133,25 +137,28 @@
                                         <div class="cp-field">
                                             <h5>标题</h5>
                                             <div class="cpp-fiel">
-                                                <input type="text" name="title" placeholder="描述一下主要内容吧！">
+                                                <input type="text" name="title" placeholder="描述一下主要内容吧！" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div id="noteTag" class="cp-field">
+                                            <h5>标签</h5>
+                                            <div class="cpp-fiel row">
+                                                <input id="selectTag" v-model="selectTag" class="col-md-10 col-xs-8 form-control" type="text" name="title" placeholder="请先输入要选择的标签名！" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off">
+                                                <div class="save-stngs select-tab col-md-2 col-xs-4" style="width: auto;float: right;padding: 0px">
+                                                    <ul style="float: right">
+                                                        <li>
+                                                            <button type="button" class="btn btn-outline-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                创建一个标签
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="cp-field">
-                                            <h5 style="float: none">标签</h5>
                                             <div class="select-tab row align-items-center" style="margin-bottom: 10px">
                                                 <ul class="quest-tags-b" style="float:left;margin-top: 0;width: auto">
-                                                    <li>Work<i class="fa fa-times-circle" onclick="onClickClose(this)" style="margin-left:5px;margin-right: -2px;cursor:pointer"></i></li>
-                                                    <li>Php<i class="fa fa-times-circle" onclick="onClickClose(this)" style="margin-left:5px;margin-right: -2px;cursor:pointer"></i></li>
-                                                    <li>Design<i class="fa fa-times-circle" onclick="onClickClose(this)" style="margin-left:5px;margin-right: -2px;cursor:pointer"></i></li>
                                                 </ul>
-                                                <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    添加一个标签
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" onclick="onClickDropdownItem(this)" href="#">c</a>
-                                                    <a class="dropdown-item" onclick="onClickDropdownItem(this)" href="#">php</a>
-                                                    <a class="dropdown-item" onclick="onClickDropdownItem(this)" href="#">Design</a>
-                                                </div>
                                             </div>
                                         </div>
                                         <div id="test-editormd">
@@ -453,7 +460,7 @@
                                 <div class="acc-setting">
                                     <div class="cp-field">
                                         <div class="cpp-fiel row">
-                                            <input class="col-md-10 col-xs-8" style="width: 90%" type="text" name="title" placeholder="创建一个新标签！">
+                                            <input class="col-md-10 col-xs-8 form-control" style="width: 90%" type="text" name="title" placeholder="创建一个新标签！">
                                             <div class="save-stngs col-md-2 col-xs-4" style="width: auto;float: right;padding: 0px">
                                                 <ul style="float: right">
                                                     <li>
@@ -606,19 +613,66 @@
 <footer class="myfooter">
     <div class="footy-sec mn no-margin">
         <div class="container text-center">
-            <p style="float: none;"><span><img style="float: none;" src="../static/images/copy-icon2.png" alt="">Copyright 2020 本归尘博客系统由游马版权所有</span></p>
+            <p style="float: none;"><span><img style="float: none;" src="/user/static/images/copy-icon2.png" alt="">Copyright 2020 本归尘博客系统由游马版权所有</span></p>
         </div>
     </div>
 </footer>
 
 
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="../static/js/popper.js"></script>
-<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../static/js/jquery.mCustomScrollbar.js"></script>
-<script type="text/javascript" src="../static/lib/slick/slick.min.js"></script>
-<script type="text/javascript" src="../static/js/script.js"></script>
-<script type="text/javascript" src="../static/lib/editor/editormd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/9.0.3/js/autoComplete.min.js"></script>
+<script type="text/javascript" src="/user/static/js/popper.js"></script>
+<script type="text/javascript" src="/user/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/user/static/js/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="/user/static/lib/slick/slick.min.js"></script>
+<script type="text/javascript" src="/user/static/js/script.js"></script>
+<script type="text/javascript" src="/user/static/lib/editor/editormd.min.js"></script>
+
+<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+<script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+<script type="text/javascript">
+    var public_path = "/user/templates/";
+</script>
+<script type="text/javascript">
+    //标签输入框提示
+    var tagAuto = new autoComplete({
+        selector: "#selectTag",
+        placeHolder: "请选择标签名！",
+        data: {
+            // src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"]
+            src: async function () {
+                var keyWord = $("#selectTag").val();
+                var url = "/tags/" + keyWord;
+                  const source = await fetch(url);
+                  const result = await source.json();
+                  var temp = eval(result).data;
+                  return temp;
+            },
+            key: ["id", "name"]
+        },
+        resultsList: {
+            noResults: (list, query) => {
+                const message = document.createElement("li");
+                message.setAttribute("class", "no_result");
+                message.innerHTML = `<span>没有找到<span class="autoComplete_highlighted">"${query}"</span></span>`;
+                list.appendChild(message);
+            },
+        },
+        resultItem: {
+            highlight: {
+                render: true
+            }
+        },
+        onSelection: (feedback) => {
+            var value = feedback.selection.value.name;
+            onClickDropdownItem(value);
+        },
+    });   
+</script>
+
+
+
 <script>
     //回顶部
     $(function() {
@@ -636,14 +690,14 @@
 </script>
 
 <script type="text/javascript">
+    //markdown编辑
     var testEditor;
-
     $(function() {
         testEditor = editormd("test-editormd", {
             width   : "100%",
             height  : 640,
             syncScrolling : "single",
-            path    : "../static/lib/editor/lib/"
+            path    : "/user/static/lib/editor/lib/"
         });
 
         /*
@@ -656,33 +710,20 @@
         });
         */
     });
+
+    //点击标签提示item
     function onClickDropdownItem(x) {
         var tab=document.createElement("li");
         var tabi=document.createElement("i");
-        tab.innerHTML=x.innerHTML;
+        tab.innerHTML=x;
         tabi.className = "fa fa-times-circle";
         tabi.setAttribute("onclick", "onClickClose(this)");
         tabi.style="margin-left:5px;margin-right: -2px;cursor:pointer";
         tab.append(tabi);
         $(".quest-tags-b").append(tab);
-        if(x.parentElement.childElementCount===1){
-            x.innerHTML="快去添加新的标签吧！";
-            x.onclick=null;
-        }else{
-            x.remove();
-        }
     }
+    //点击标签'X'按钮
     function onClickClose(x) {
-        var item=document.createElement("a");
-        item.className="dropdown-item";
-        item.setAttribute("onclick", "onClickDropdownItem(this)");
-        item.innerHTML=x.previousSibling.nodeValue;
-        var menu = $(".dropdown-menu")[0];
-        if (menu.firstElementChild.innerHTML==="快去添加新的标签吧！") {
-            menu.innerHTML="";
-        }
-        menu.append(item);
-
         x.parentNode.remove();
     }
 </script>
