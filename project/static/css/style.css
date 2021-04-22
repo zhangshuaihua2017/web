@@ -4426,7 +4426,7 @@ a:hover {
 }
 .cp-field input {
 	height: 40px;
-	padding: 0 10px;
+	padding: 0 20px;
 }
 .cp-field input,
 .cp-field textarea {
@@ -4770,7 +4770,7 @@ a:hover {
 }
 .usr-mg-info {
 	float: left;
-	padding-left: 13px;
+	/*padding-left: 13px;*/
 }
 .usr-mg-info h3 {
 	color: #000000;

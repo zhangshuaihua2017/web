@@ -140,27 +140,29 @@
                                                 <input type="text" name="title" placeholder="描述一下主要内容吧！" class="form-control">
                                             </div>
                                         </div>
-                                        <div id="noteTag" class="cp-field">
+                                        <div class="cp-field">
                                             <h5>标签</h5>
-                                            <div class="cpp-fiel row">
-                                                <input id="selectTag" v-model="selectTag" class="col-md-10 col-xs-8 form-control" type="text" name="title" placeholder="请先输入要选择的标签名！" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off">
-                                                <div class="save-stngs select-tab col-md-2 col-xs-4" style="width: auto;float: right;padding: 0px">
-                                                    <ul style="float: right">
-                                                        <li>
-                                                            <button type="button" class="btn btn-outline-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                创建一个标签
-                                                            </button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                            <div class="cpp-fiel row" style="position: relative;">
+                                                <input id="selectTag" class="col-md-12 col-xs-4 form-control" type="text" name="title" placeholder="请先输入要选择的标签名！" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off">
+                                                <!-- <i class="la la-dollar"></i> -->
+                                                <button id="createTag" type="button" class="btn btn-outline-info" style="position: absolute;top: 0px;right: 0px;display: none">
+                                                    创建一个标签
+                                                </button>
                                             </div>
                                         </div>
-                                        <div class="cp-field">
-                                            <div class="select-tab row align-items-center" style="margin-bottom: 10px">
+                                        <div id="warningDiv" class="cp-field" style="display: none;margin-top: 0px">
+                                            <div class="alert alert-danger" style="margin-bottom: 0px">
+                                                <a href="javascript:hideWarning()" class="pull-right" style="color: #000000;font-size: 24px;font-weight: bolder;">&times;</a>
+                                                <strong id="warningContent" style="font-weight: bolder;">警告！</strong>
+                                            </div>
+                                        </div>
+                                        <div class="cp-field" style="margin-top: 15px;margin-bottom: 15px">
+                                            <div class="select-tab row align-items-center">
                                                 <ul class="quest-tags-b" style="float:left;margin-top: 0;width: auto">
                                                 </ul>
                                             </div>
                                         </div>
+                                        
                                         <div id="test-editormd">
                                             <textarea style="display:none;">[TOC]
 
@@ -636,18 +638,23 @@
 </script>
 <script type="text/javascript">
     //标签输入框提示
+    var tagNumber = 0;
+    var tagArray = [];
     var tagAuto = new autoComplete({
         selector: "#selectTag",
         placeHolder: "请选择标签名！",
         data: {
             // src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"]
             src: async function () {
-                var keyWord = $("#selectTag").val();
-                var url = "/tags/" + keyWord;
-                  const source = await fetch(url);
-                  const result = await source.json();
-                  var temp = eval(result).data;
-                  return temp;
+                var url = "/tags/" + $("#selectTag").val();
+                const source = await fetch(url);
+                const result = await source.json();
+                var data = eval(result).data;
+
+                if(data.length != 0){
+                    $("#createTag").hide();
+                }
+                return data;
             },
             key: ["id", "name"]
         },
@@ -655,8 +662,10 @@
             noResults: (list, query) => {
                 const message = document.createElement("li");
                 message.setAttribute("class", "no_result");
-                message.innerHTML = `<span>没有找到<span class="autoComplete_highlighted">"${query}"</span></span>`;
+                message.innerHTML = `<span>not found <span class="autoComplete_highlighted">"${query}"</span></span>`;
                 list.appendChild(message);
+
+                $("#createTag").show();
             },
         },
         resultItem: {
@@ -669,6 +678,64 @@
             onClickDropdownItem(value);
         },
     });   
+
+    //点击标签项
+    function onClickDropdownItem(value) {
+        if(tagNumber >= 5){
+            $("#warningDiv").show();
+            $("#warningContent").text("警告！标签最多可添加5个！");
+            return;
+        }else{
+            if(tagArray.indexOf(value) > -1){
+                $("#warningDiv").show();
+                $("#warningContent").text("警告！不可添加重复标签！");
+                return;
+            }
+            var tab=document.createElement("li");
+            var tabi=document.createElement("i");
+            tab.innerHTML=value;
+            tabi.className = "fa fa-times-circle";
+            tabi.setAttribute("onclick", "onClickClose(this)");
+            tabi.style="margin-left:5px;margin-right: -2px;cursor:pointer";
+            tab.append(tabi);
+            $(".quest-tags-b").append(tab);
+            
+            tagArray.push(value);
+            tagNumber++;
+        }
+    }
+    //点击标签'X'按钮
+    function onClickClose(x) {
+        x.parentNode.remove();
+        var index = tagArray.indexOf(x.innerHTML);
+        tagArray.splice(index, 1);
+        tagNumber--;
+    }
+
+    //创建标签
+    $("#createTag").click(function(){
+        var tagName = $("#selectTag").val();
+        $.ajax({
+            type: "POST",
+            url: "/tag",
+            data: {name: tagName},
+            dataType: "json",
+            success: function(data){
+                var result = data.message;
+                if(result == "SUCCESS"){
+                    alert("创建成功");
+                    onClickDropdownItem(tagName);
+                    return;
+                }
+                alert(result);
+            }
+        });
+    });
+
+    //隐藏警告框
+    function hideWarning() {
+        $("#warningDiv").hide();
+    }
 </script>
 
 
@@ -710,22 +777,6 @@
         });
         */
     });
-
-    //点击标签提示item
-    function onClickDropdownItem(x) {
-        var tab=document.createElement("li");
-        var tabi=document.createElement("i");
-        tab.innerHTML=x;
-        tabi.className = "fa fa-times-circle";
-        tabi.setAttribute("onclick", "onClickClose(this)");
-        tabi.style="margin-left:5px;margin-right: -2px;cursor:pointer";
-        tab.append(tabi);
-        $(".quest-tags-b").append(tab);
-    }
-    //点击标签'X'按钮
-    function onClickClose(x) {
-        x.parentNode.remove();
-    }
 </script>
 
 </body>
